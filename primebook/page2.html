@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Prime Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-transition">
+
+  <div class="a4-landscape page2">
+
+    <!-- Background Image -->
+    <img src="gallery/img2.jpeg" alt="About Us Background" class="bg-cover-img">
+
+    <!-- Top Right Logo Image -->
+    <img src="gallery/prime-solutions-Logo.png-2.png" alt="Prime Solutions Logo" class="ps-logo top-right-logo">
+
+    <!-- Left Sidebar Content Container (Exact Match) -->
+    <div class="about-sidebar">
+      
+      <!-- Page Title -->
+      <h1 class="about-title">ABOUT US</h1>
+
+      <!-- Red Ribbon Badge -->
+      <div class="partner-badge">Your Key Project Partner</div>
+
+      <!-- Main Paragraph -->
+      <p class="about-desc">
+        At Prime Solutions, we deliver more than just products; we provide peace of mind. We are committed to supporting your projects from start to finish, ensuring that every phase of your work process is safe, organized, and highly efficient with innovative, tailored solutions.
+      </p>
+
+      <!-- Bullet Points -->
+      <div class="about-bullets">
+        <p><strong>4 Strategic Hubs (Auckland, Tauranga, Christchurch & Dunedin)</strong> for rapid nationwide logistics</p>
+        <p><strong>Your dedicated partner,</strong> supporting your project from concept to completion.</p>
+        <p><strong>Our Promise:</strong> Finding exactly what your project needs.</p>
+      </div>
+
+      <!-- Bottom Red Overlay Box -->
+      <div class="red-features-box">
+        <div class="feature-item">
+          <h3>• Certified Quality</h3>
+          <p>Products and solutions that meet rigorous European standards and hold all required New Zealand certifications.</p>
+        </div>
+
+        <div class="feature-item">
+          <h3>• Global Partnerships</h3>
+          <p>Supported by an international network of engineers and trusted partnerships with globally recognized suppliers.</p>
+        </div>
+
+        <div class="feature-item">
+          <h3>• Tailored Solutions</h3>
+          <p>Delivering customized commercial solutions designed to meet the unique requirements of every project.</p>
+        </div>
+
+        <div class="feature-item">
+          <h3>• Proven Experience</h3>
+          <p>Backed by 100+ years of combined industry expertise, delivering New Zealand's premier site enablement standards.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-bottom">
+      <button class="nav-btn prev-btn" id="prevPageBtn" title="Previous Page">&#10094;</button>
+      <button class="nav-btn next-btn" id="nextPageBtn" title="Next Page">&#10095;</button>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('prevPageBtn').addEventListener('click', function() {
+      document.body.classList.add('fade-out');
+      setTimeout(() => { window.location.href = 'cover.html'; }, 300);
+    });
+
+    document.getElementById('nextPageBtn').addEventListener('click', function() {
+      document.body.classList.add('fade-out');
+      setTimeout(() => { window.location.href = 'page3.html'; }, 300);
+    });
+  </script>
+
+</body>
+</html>

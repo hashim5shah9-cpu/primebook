@@ -1,0 +1,423 @@
+:root {
+  --brand-red: #B42124;
+  --font-inter: 'Inter', sans-serif;
+  --font-lexend: 'Lexend', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font-inter);
+}
+
+/* Page Transition Effect */
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* ==========================================
+   1. A4 PORTRAIT CANVAS SETUP (Cover Page)
+   ========================================== */
+.a4-page {
+  width: 595px;
+  height: 842px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Cover Page Landscape Adjustments */
+.cover-page .bg-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-page .ps-logo {
+  left: 30px;
+  top: 25px;
+  width: 140px;
+  height: auto;
+}
+
+.cover-page .company-profile-badge {
+  width: 340px;
+  height: 55px;
+  right: 40px;
+  left: auto;
+  top: 80px;
+  font-size: 28px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.cover-page .text-prime {
+  width: 842px;
+  left: 0;
+  top: 310px;
+  font-size: 90px;
+  line-height: 100px;
+}
+
+.cover-page .text-solutions {
+  width: 842px;
+  left: 0;
+  top: 400px;
+  font-size: 75px;
+  line-height: 85px;
+}
+
+.cover-page .black-overlay-box {
+  width: 600px;
+  height: 70px;
+  left: 121px;
+  top: 480px;
+}
+
+.cover-page .bottom-footer-strip {
+  width: 846px;
+  height: 28px;
+  left: -2px;
+  bottom: 12px;
+  top: auto;
+}
+
+/* Background Image Cover */
+.bg-cover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Top Left Logo Image */
+.ps-logo {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 135px;
+  height: 56px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Red Profile Badge */
+.company-profile-badge {
+  position: absolute;
+  width: 318px;
+  height: 66px;
+  left: 277px;
+  top: 111px;
+  background: var(--brand-red);
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 66px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  z-index: 2;
+}
+
+.company-profile-badge strong {
+  font-weight: 700;
+}
+
+/* PRIME Title */
+.text-prime {
+  position: absolute;
+  width: 595px;
+  left: 0;
+  top: 565px;
+  font-family: var(--font-inter);
+  font-weight: 200;
+  font-size: 70px;
+  line-height: 85px;
+  text-align: center;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+/* SOLUTIONS Title */
+.text-solutions {
+  position: absolute;
+  width: 595px;
+  left: 0;
+  top: 635px;
+  font-family: var(--font-lexend);
+  font-weight: 450;
+  font-size: 60px;
+  line-height: 69px;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+/* Black Semi-Transparent Guide Box */
+.black-overlay-box {
+  position: absolute;
+  width: 485px;
+  height: 76px;
+  left: 55px;
+  top: 707px;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.overlay-heading {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 14.5px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.overlay-subtext {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 9.8px;
+  line-height: 12px;
+  opacity: 0.95;
+}
+
+.overlay-locations {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 12px;
+  margin-top: 5px;
+  opacity: 0.85;
+}
+
+/* Red Footer Bar */
+.bottom-footer-strip {
+  position: absolute;
+  width: 846px;
+  height: 28px;
+  left: -2px;
+  bottom: 0;
+  top: auto;
+  background: var(--brand-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.footer-contact {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.f-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 9px;
+  color: #FFFFFF;
+}
+
+.f-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* Navigation Bottom Container */
+.nav-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+/* Dual Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  bottom: 0;
+  width: 42px;
+  height: 42px;
+  background-color: var(--brand-red);
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+.nav-btn:hover {
+  background-color: #ffffff;
+  color: var(--brand-red);
+  transform: scale(1.1);
+}
+
+
+/* ==========================================
+   2. A4 LANDSCAPE CANVAS SETUP (Page 2 & Onwards)
+   ========================================== */
+.a4-landscape {
+  width: 842px;
+  height: 595px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+  background-color: #000000;
+}
+
+/* Top Right Logo Image Styling */
+.top-right-logo {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  left: auto;
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  z-index: 10;
+}
+
+/* Left Sidebar Overlay Panel - Exact Image Match */
+.about-sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.50);
+  padding: 30px 22px 0 22px;
+  color: #FFFFFF;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.partner-badge {
+  background-color: var(--brand-red);
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 5px 10px;
+  display: block;
+  margin-left: -22px;
+  margin-right: -22px;
+  margin-bottom: 12px;
+}
+
+.about-desc {
+  font-family: var(--font-inter);
+  font-size: 8px;
+  line-height: 1.45;
+  color: #d8d8d8;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.about-bullets {
+  font-family: var(--font-inter);
+  font-size: 7.8px;
+  line-height: 1.4;
+  color: #d1d1d1;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-bullets strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* Bottom Red Features Box */
+.red-features-box {
+  background-color: rgba(180, 33, 36, 0.44);
+  margin-left: -22px;
+  margin-right: -22px;
+  padding: 14px 22px 18px 22px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feature-item h3 {
+  font-family: var(--font-inter);
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.feature-item p {
+  font-family: var(--font-inter);
+  font-size: 7.5px;
+  line-height: 1.35;
+  color: #f0f0f0;
+  font-weight: 400;
+}
+
+/* Print Setup Rules */
+@page {
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: none;
+  }
+  .a4-page, .a4-landscape {
+    box-shadow: none;
+  }
+  .nav-bottom, .nav-btn {
+    display: none !important;
+  }
+}
